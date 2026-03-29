@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Oracle d'Amour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#2c1035">
+  <meta name="description" content="Découvrez votre message amoureux grâce à ces 40 cartes.">
+</head>
+<body>
+  <div id="app">
+    <!-- View List -->
+    <div id="view-list" class="view active">
+      <header class="main-header">
+        <h1>Oracle d'Amour</h1>
+        <p>Sélectionnez un numéro pour révéler son message</p>
+      </header>
+      <div id="grid-container" class="grid-container"></div>
+    </div>
+
+    <!-- View Detail -->
+    <div id="view-detail" class="view hidden">
+      <header class="detail-header">
+        <button id="btn-back" class="btn-back">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Retour
+        </button>
+        <div id="detail-number" class="detail-number">1</div>
+      </header>
+      <div class="detail-content scrollable">
+        <h2 id="detail-title">Titre de la carte</h2>
+        <div class="keyword-badge" id="detail-keyword">MOT-CLÉ</div>
+        <p class="sens-general" id="detail-sens">Sens général...</p>
+        
+        <div class="sections">
+          <div class="section">
+            <h3>Passé</h3>
+            <p id="detail-past">Texte du passé</p>
+          </div>
+          <div class="section">
+            <h3>Présent</h3>
+            <p id="detail-present">Texte du présent</p>
+          </div>
+          <div class="section">
+            <h3>Futur</h3>
+            <p id="detail-future">Texte du futur</p>
+          </div>
+        </div>
+
+        <div class="advice-box">
+          <h3>Conseil</h3>
+          <p id="detail-advice">Le conseil...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
