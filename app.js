@@ -24,9 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('detail-title').textContent = cardData.name;
     document.getElementById('detail-keyword').textContent = cardData.keyword;
     document.getElementById('detail-sens').textContent = cardData.generalMeaning;
-    document.getElementById('detail-past').textContent = cardData.past;
-    document.getElementById('detail-present').textContent = cardData.present;
-    document.getElementById('detail-future').textContent = cardData.future;
+    document.getElementById('section1-title').textContent = cardData.section1Title || "Passé";
+    document.getElementById('detail-past').textContent = cardData.past || cardData.section1Text;
+    
+    document.getElementById('section2-title').textContent = cardData.section2Title || "Présent";
+    document.getElementById('detail-present').textContent = cardData.present || cardData.section2Text;
+    
+    document.getElementById('section3-title').textContent = cardData.section3Title || "Futur";
+    document.getElementById('detail-future').textContent = cardData.future || cardData.section3Text;
     
     // Clean advice
     let advice = cardData.advice.replace(/^«\s*|\s*»$/g, '').trim();
